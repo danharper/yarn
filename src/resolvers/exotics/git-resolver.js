@@ -13,7 +13,8 @@ import Git from '../../util/git.js';
 const urlParse = require('url').parse;
 
 // we purposefully omit https and http as those are only valid if they end in the .git extension
-const GIT_PROTOCOLS = ['git', 'git+ssh', 'git+https', 'ssh'];
+const GIT_SSH_PROTOCOLS = ['git+ssh', 'ssh']
+const GIT_PROTOCOLS = ['git', 'git+https', ...GIT_SSH_PROTOCOLS];
 
 const GIT_HOSTS = ['github.com', 'gitlab.com', 'bitbucket.com'];
 
@@ -85,13 +86,19 @@ export default class GitResolver extends ExoticResolver {
       }
     }
 
+    let gitUrl = url
+
+    if (GIT_SSH_PROTOCOLS.indexOf(util.removeSuffix(parts.protocol, ':')) && parts.pathname.startsWith('/:')) {
+      gitUrl = gitUrl.replace(util.removePrefix(parts.pathname, '/'), '/' + util.removePrefix(parts.pathname, '/:'))
+    }
+
     // get from lockfile
     const shrunk = this.request.getLocked('git');
     if (shrunk) {
       return shrunk;
     }
 
-    const client = new Git(this.config, url, this.hash);
+    const client = new Git(this.config, gitUrl, this.hash);
     const commit = await client.initRemote();
 
     async function tryRegistry(registry): Promise<?Manifest> {
