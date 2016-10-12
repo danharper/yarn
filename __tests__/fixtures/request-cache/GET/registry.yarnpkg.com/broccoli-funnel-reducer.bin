@@ -1,0 +1,22 @@
+HTTP/1.1 200 OK
+Date: Wed, 12 Oct 2016 21:27:43 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Set-Cookie: __cfduid=d9e4488f7d8d7f407bb13e93cba9385531476307663; expires=Thu, 12-Oct-17 21:27:43 GMT; path=/; domain=.yarnpkg.com; HttpOnly
+etag: W/"A87LNN6B7K8TR14D9177OQIL0"
+Cache-Control: max-age=300
+Via: 1.1 varnish
+Age: 37
+X-Served-By: cache-lcy1135-LCY
+X-Cache: HIT
+X-Cache-Hits: 1
+X-Timer: S1476307663.687214,VS0,VE0
+Vary: Accept-Encoding
+Server: cloudflare-nginx
+CF-RAY: 2f0da3320d4a0a7e-LHR
+
+6a9
+{"_id":"broccoli-funnel-reducer","_rev":"1-b642a991b1e39e9e007e706d20137fbd","name":"broccoli-funnel-reducer","dist-tags":{"latest":"1.0.0"},"versions":{"1.0.0":{"name":"broccoli-funnel-reducer","version":"1.0.0","description":"","main":"index.js","scripts":{"test":"mocha test","test:debug":"mocha debug test"},"repository":{"type":"git","url":"git+https://github.com/ember-cli/broccoli-funnel-reducer.git"},"author":"","license":"ISC","bugs":{"url":"https://github.com/ember-cli/broccoli-funnel-reducer/issues"},"homepage":"https://github.com/ember-cli/broccoli-funnel-reducer#readme","devDependencies":{"chai":"^3.4.1","mocha":"^2.3.4"},"gitHead":"25f6d867c1de07bc30147a83a4054540a32b5d47","_id":"broccoli-funnel-reducer@1.0.0","_shasum":"11365b2a785aec9b17972a36df87eef24c5cc0ea","_from":".","_npmVersion":"3.3.6","_nodeVersion":"5.0.0","_npmUser":{"name":"stefanpenner","email":"stefan.penner@gmail.com"},"dist":{"shasum":"11365b2a785aec9b17972a36df87eef24c5cc0ea","tarball":"https://registry.npmjs.org/broccoli-funnel-reducer/-/broccoli-funnel-reducer-1.0.0.tgz"},"maintainers":[{"name":"stefanpenner","email":"stefan.penner@gmail.com"}],"directories":{}}},"readme":"# broccoli-funnel-reducer\n","maintainers":[{"name":"stefanpenner","email":"stefan.penner@gmail.com"}],"time":{"modified":"2015-11-24T00:55:55.940Z","created":"2015-11-24T00:55:55.940Z","1.0.0":"2015-11-24T00:55:55.940Z"},"homepage":"https://github.com/ember-cli/broccoli-funnel-reducer#readme","repository":{"type":"git","url":"git+https://github.com/ember-cli/broccoli-funnel-reducer.git"},"bugs":{"url":"https://github.com/ember-cli/broccoli-funnel-reducer/issues"},"license":"ISC","readmeFilename":"README.md","_attachments":{}}
+0
+
